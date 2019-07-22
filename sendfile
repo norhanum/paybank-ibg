@@ -1,0 +1,41 @@
+@Echo off
+for /f "tokens=1-3 delims=/ " %%a in ('doff mm/dd/yyyy') do set mm=%%a&set dd=%%b&set yyyy=%%c
+
+
+CD "C:\Program Files\WinSCP\"
+
+echo > "c:/POCCOPY.txt"
+
+echo option batch on >> "c:/POCCOPY.txt"
+echo option confirm off >> "c:/POCCOPY.txt"
+echo option transfer binary >> "c:/POCCOPY.txt"
+echo open pswssh:p@ssw0rd@172.16.45.20 >> c:/POCCOPY.txt
+
+echo lcd D:\BANKS\ABB\ABBR >> "C:/POCCOPY.txt"
+echo get /BANKS/ABB/ABBR/pnd%mm%%dd%1300.txt >> "C:/POCCOPY.txt" 
+
+echo lcd D:\BANKS\ABMB\ABMBR >> "C:/POCCOPY.txt"
+echo get /BANKS/ABMB/ABMBR/pnd%mm%%dd%1300.txt >> "C:/POCCOPY.txt"
+
+echo lcd D:\BANKS\AMBB\AMBBR >> "C:/POCCOPY.txt"
+echo get /BANKS/AMBB/AMBBR/pnd%mm%%dd%1300.txt >> "C:/POCCOPY.txt"
+
+echo lcd D:\BANKS\ARM\ARMR >> "C:/POCCOPY.txt"
+echo get /BANKS/ARM/ARMR/pnd%mm%%dd%1300.txt >> "C:/POCCOPY.txt"
+
+echo lcd D:\BANKS\AGRO\AGROR >> "C:/POCCOPY.txt"
+echo get /BANKS/AGRO/AGROR/pnd%mm%%dd%1300.txt >> "C:/POCCOPY.txt"
+
+echo lcd D:\BANKS\BMMB\BMMBR >> "C:/POCCOPY.txt"
+echo get /BANKS/BMMB/BMMBR/pnd%mm%%dd%1300.txt >> "C:/POCCOPY.txt"
+
+echo lcd D:\BANKS\BIMB\BIMBR >> "C:/POCCOPY.txt"
+echo get /BANKS/BIMB/BIMBR/pnd%mm%%dd%1300.txt >> "C:/POCCOPY.txt"
+
+
+echo lcd D:\BANKS\BKR\BKRR >> "C:/POCCOPY.txt"
+echo get /BANKS/BKR/BKRR/pnd%mm%%dd%1300.txt >> "C:/POCCOPY.txt"
+
+echo lcd D:\BANKS\BSN\BSNR >> "C:/POCCOPY.txt"
+echo get /BANKS/BSN/BSNR/pnd%mm%%dd%1300.txt >> "C:/POCCOPY.txt"
+
